@@ -16,23 +16,23 @@ import sys
 # https://www.hackerrank.com/challenges/sock-merchant/problem
 
 def sockMerchant(n, ar):
-    pairs = 0
-    socks = [0 for x in range(100)]
-    for i in range(len(ar)):
-        socks[ar[i] - 1] += 1
-    for i in range(len(socks)):
-        pairs += int(socks[i] / 2)
-    return pairs
+	pairs = 0
+	socks = [0 for x in range(100)]
+	for i in range(len(ar)):
+		socks[ar[i] - 1] += 1
+	for i in range(len(socks)):
+		pairs += int(socks[i] / 2)
+	return pairs
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+	fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    n = int(input().strip())
+	n = int(input().strip())
 
-    ar = list(map(int, input().rstrip().split()))
+	ar = list(map(int, input().rstrip().split()))
 
-    result = sockMerchant(n, ar)
+	result = sockMerchant(n, ar)
 
-    fptr.write(str(result) + '\n')
+	fptr.write(str(result) + '\n')
 
-    fptr.close()
+	fptr.close()
