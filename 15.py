@@ -20,11 +20,10 @@ def saveThePrisoner(n, m, s):
 	x = m % n
 	if (x + s - 1) == 0:
 		return n
+	if (x + s - 1) > n:
+		return (x + s - n - 1)
 	return (x + s - 1)
 
-print("Result:", saveThePrisoner(999999999, 999999999, 1))
-
-"""
 if __name__ == '__main__':
 	fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
@@ -44,4 +43,3 @@ if __name__ == '__main__':
 		fptr.write(str(result) + '\n')
 
 	fptr.close()
-"""
